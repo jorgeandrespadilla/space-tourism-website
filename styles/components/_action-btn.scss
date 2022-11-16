@@ -1,4 +1,5 @@
 .action-btn {
+    width: fit-content;
     position: relative;
     margin: 2.75rem;
     padding-inline: 32px;
@@ -13,7 +14,7 @@
         padding-inline: 48px;
     }
     
-    @include for-tablet-up {
+    @include for-desktop-up {
         margin: 4.75rem;
         padding-inline: 64px;
     }

@@ -5,10 +5,36 @@
 
 body {
     background-color: $dark-color;
+    background-position: center center;
+    background-size: cover;
     color: $light-color;
     overflow-x: hidden;
 }
 
 p {
     word-wrap: break-word;
+    color: $soft-light-color;
+}
+
+.title {
+    color: $light-color;
+
+    & .number {
+        font-weight: 700;
+        margin-right: 16px;
+        opacity: 0.25;
+
+        @include for-desktop-up {
+            margin-right: 24px;
+        }
+    }
+}
+
+.main-content {
+    display: grid;
+    text-align: center;
+
+    @include for-desktop-up {
+        text-align: start;
+    }
 }
