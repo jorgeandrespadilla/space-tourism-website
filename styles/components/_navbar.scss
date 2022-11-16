@@ -39,7 +39,6 @@
     display: flex;
     align-items: stretch;
 
-
     @include for-tablet-up {
         padding-inline: clamp(3rem, 7vw, 7rem);
         background-color: rgba($light-color, 0.05);
@@ -68,7 +67,7 @@
 .navbar__links .link {
     display: flex;
     align-items: stretch;
-    padding-top: 2px;
+    padding-top: 3px;
     border-bottom: 3px solid transparent;
 
     & a {

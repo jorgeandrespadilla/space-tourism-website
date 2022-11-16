@@ -312,7 +312,7 @@ p {
 .navbar__links .link {
   display: flex;
   align-items: stretch;
-  padding-top: 2px;
+  padding-top: 3px;
   border-bottom: 3px solid transparent;
 }
 .navbar__links .link a {

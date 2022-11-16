@@ -1,0 +1,31 @@
+.tabs {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: clamp(26px, 3vw, 36px);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: $soft-light-color;
+}
+
+.tab {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 3px solid transparent;
+
+    & a {
+        text-decoration: none;
+        color: inherit;
+        padding-bottom: 12px;
+    }
+
+    &:hover {
+        border-bottom-color: rgba($light-color, 0.5);
+    }
+
+    &.active {
+        color: $light-color;
+        border-bottom-color: $light-color;
+    }
+}
