@@ -3,41 +3,71 @@
 
 /** Headings **/
 
-h1 .heading--1 {
+h1.heading--1 {
     font-family: $font-family-serif;
-    font-size: $font-size-h1;
+    font-size: map-get($font-size-h1, base);
+    @include for-tablet-up {
+        font-size: map-get($font-size-h1, tablet);
+    }
 }
 
-h2 .heading--2 {
+h2.heading--2 {
     font-family: $font-family-serif;
-    font-size: $font-size-h2;
+    font-size: map-get($font-size-h2, base);
+    @include for-tablet-up {
+        font-size: map-get($font-size-h2, tablet);
+    }
+    @include for-desktop-up {
+        font-size: map-get($font-size-h2, desktop);
+    }
 }
 
-h3 .heading--3 {
+h3.heading--3 {
     font-family: $font-family-serif;
-    font-size: $font-size-h3;
+    font-size: map-get($font-size-h3, base);
+    @include for-tablet-up {
+        font-size: map-get($font-size-h3, tablet);
+    }
+    @include for-desktop-up {
+        font-size: map-get($font-size-h3, desktop);
+    }
 }
 
-h4 .heading--4 {
+h4.heading--4 {
     font-family: $font-family-serif;
-    font-size: $font-size-h4;
+    font-size: map-get($font-size-h4, base);
+    @include for-tablet-up {
+        font-size: map-get($font-size-h4, tablet);
+    }
+    @include for-desktop-up {
+        font-size: map-get($font-size-h4, desktop);
+    }
+
 }
 
 h5.heading--5 {
     font-family: $font-family-sans;
-    font-size: $font-size-h5;
-    letter-spacing: $spacing-h5;
+    font-size: map-get($font-size-h5, base);
+    letter-spacing: map-get($spacing-h5, base);
+    @include for-tablet-up {
+        font-size: map-get($font-size-h5, tablet);
+        letter-spacing: map-get($spacing-h5, tablet);
+    }
+    @include for-desktop-up {
+        font-size: map-get($font-size-h5, desktop);
+        letter-spacing: map-get($spacing-h5, desktop);
+    }
 }
 
 
 /** Subheadings **/
 
-h1 .subheading--1 {
+h1.subheading--1 {
     font-family: $font-family-serif;
     font-size: $font-size-sh1;
 }
 
-h2 .subheading--2 {
+h2.subheading--2 {
     font-family: $font-family-sans;
     font-size: $font-size-sh2;
     letter-spacing: $spacing-sh2;
@@ -53,13 +83,25 @@ h1, h2, h3, h4, h5 {
 
 .nav__text {
     font-family: $font-family-sans;
-    font-size: $font-size-nav;
-    letter-spacing: $spacing-nav;
+    font-size: map-get($font-size-nav, base);
+    letter-spacing: map-get($spacing-nav, base);
+    @include for-desktop-up {
+        font-size: map-get($font-size-nav, desktop);
+        letter-spacing: map-get($spacing-nav, desktop);
+    }
     text-transform: uppercase;
 }
 
 p {
     font-family: $font-family-base;
-    font-size: $font-size-base;
-    line-height: 32px;
+    font-size: map-get($font-size-text, base);
+    line-height: map-get($line-height-text, base);
+    @include for-tablet-up {
+        font-size: map-get($font-size-text, tablet);
+        line-height: map-get($line-height-text, tablet);
+    }
+    @include for-desktop-up {
+        font-size: map-get($font-size-text, desktop);
+        line-height: map-get($line-height-text, desktop);
+    }
 }

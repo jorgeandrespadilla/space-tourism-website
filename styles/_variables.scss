@@ -13,19 +13,68 @@ $font-family-sans: 'Barlow Condensed', sans-serif;
 $font-family-serif: 'Bellefair', serif;
 
 // Font size
-$font-size-base: 18px;
-
-$font-size-h1: 150px;
-$font-size-h2: 100px;
-$font-size-h3: 56px;
-$font-size-h4: 32px;
-$font-size-h5: 28px;
+$font-size-h1: (
+    base: 80px,
+    tablet: 150px,
+);
+$font-size-h2: (
+    base: 56px,
+    tablet: 80px,
+    desktop: 100px,
+);
+$font-size-h3: (
+    base: 24px,
+    tablet: 40px,
+    desktop: 56px,
+);
+$font-size-h4: (
+    base: 16px,
+    tablet: 24px,
+    desktop: 32px,
+);
+$font-size-h5: (
+    base: 16px,
+    tablet: 20px,
+    desktop: 28px,
+);
 
 $font-size-sh1: 28px;
 $font-size-sh2: 14px;
-$font-size-nav: 16px;
+$font-size-nav: (
+    base: 14px,
+    desktop: 16px,
+);
+
+$font-size-text: (
+    base: 15px,
+    tablet: 16px,
+    desktop: 18px,
+);
+
 
 // Letter spacing
-$spacing-h5: 4.75px;
+$spacing-h5: (
+    base: 2.7px,
+    tablet: 3.5px,
+    desktop: 4.75px,
+);
 $spacing-sh2: 2.35px;
-$spacing-nav: 2.7px;
+$spacing-nav: (
+    base: 2.36px,
+    desktop: 2.7px,
+);
+
+// Line height
+$line-height-text: (
+    base: 25px,
+    tablet: 28px,
+    desktop: 32px,
+);
+
+
+/** BREAKPOINTS **/
+
+$breakpoints: (
+    tablet: 768px,
+    desktop: 1200px,
+);
