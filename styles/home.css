@@ -447,7 +447,7 @@ body {
   .main-content {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    max-width: 1320px;
+    max-width: 1200px;
     margin: auto;
   }
 }
