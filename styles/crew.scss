@@ -65,6 +65,18 @@ $main-content-inline-pd: 36px;
         align-self: end;
         grid-area: img;
     }
+
+    &.crew-specialist__image {
+        width: 150px;
+
+        @include for-tablet-up {
+            width: 360px;
+        }
+
+        @include for-desktop-up {
+            width: 450px;
+        }
+    }
 }
 
 .slider-navigation {
@@ -77,7 +89,7 @@ $main-content-inline-pd: 36px;
 
     @include for-desktop-up {
         width: 400px;
-        margin-block: 80px 24px;
+        margin-block: 160px 60px;
         grid-area: nav;
     }
 }
@@ -87,6 +99,7 @@ $main-content-inline-pd: 36px;
     @include for-tablet-up {
         padding-inline: calc(155px - $main-content-inline-pd);
     }
+
     @include for-desktop-up {
         padding-inline: 0;
     }
@@ -108,8 +121,16 @@ $main-content-inline-pd: 36px;
         }
     }
 
+    p {
+        margin-bottom: 40px;
+    }
+
     @include for-tablet-up {
         order: 2;
+
+        p {
+            margin-bottom: 0;
+        }
     }
 
     @include for-desktop-up {

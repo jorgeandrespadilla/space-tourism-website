@@ -540,6 +540,19 @@ body {
     grid-area: img;
   }
 }
+.crew-image.crew-specialist__image {
+  width: 150px;
+}
+@media (min-width: 650px) {
+  .crew-image.crew-specialist__image {
+    width: 360px;
+  }
+}
+@media (min-width: 1200px) {
+  .crew-image.crew-specialist__image {
+    width: 450px;
+  }
+}
 
 .slider-navigation {
   margin-block: 32px;
@@ -553,7 +566,7 @@ body {
 @media (min-width: 1200px) {
   .slider-navigation {
     width: 400px;
-    margin-block: 80px 24px;
+    margin-block: 160px 60px;
     grid-area: nav;
   }
 }
@@ -585,9 +598,15 @@ body {
     margin-bottom: 30px;
   }
 }
+.crew-info p {
+  margin-bottom: 40px;
+}
 @media (min-width: 650px) {
   .crew-info {
     order: 2;
+  }
+  .crew-info p {
+    margin-bottom: 0;
   }
 }
 @media (min-width: 1200px) {
