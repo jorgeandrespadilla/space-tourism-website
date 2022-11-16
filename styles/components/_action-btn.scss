@@ -1,0 +1,38 @@
+.action-btn {
+    position: relative;
+    margin: 2.75rem;
+    padding-inline: 32px;
+    background-color: $light-color;
+    color: $dark-color;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    cursor: pointer;
+
+    @include for-tablet-up {
+        margin: 4.25rem;
+        padding-inline: 48px;
+    }
+    
+    @include for-tablet-up {
+        margin: 4.75rem;
+        padding-inline: 64px;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: $light-color;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+        opacity: 0.1;
+        transform: scale(1.6);
+    }
+}
