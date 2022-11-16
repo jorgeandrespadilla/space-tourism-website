@@ -1,0 +1,113 @@
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+
+    @include for-desktop-up {
+        padding: 40px 0;
+
+        &::after {
+            content: '';
+            position: relative;
+            align-self: center;
+            order: 1;
+            top: 0;
+            right: -2rem;
+            height: 1px;
+            width: 100%;
+            background: rgba($light-color, 0.25);
+        }
+    }
+}
+
+.main-header .logo {
+    flex-shrink: 0;
+    order: 0;
+    margin: 24px clamp(24px, 4vw, 64px);
+
+    &>img {
+        width: 36px;
+        @include for-tablet-up {
+            width: 48px;
+        }
+    }
+}
+
+.navbar {
+    order: 2;
+    display: flex;
+    align-items: stretch;
+
+    background-color: rgba($light-color, 0.05);
+
+    @include for-tablet-up {
+        padding-inline: clamp(3rem, 7vw, 7rem);
+    }
+    @include for-desktop-up {
+        padding-inline: clamp(3rem, 6vw, 7rem) clamp(3rem, 8vw, 7rem);
+    }
+}
+
+.navbar__links {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    
+    @include for-tablet-up {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        gap: clamp(1.5rem, 5vw, 3.5rem);
+    }
+}
+
+.navbar__links .link {
+    display: flex;
+    align-items: stretch;
+    padding-top: 2px;
+    border-bottom: 2px solid transparent;
+
+    & a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+
+        & .number {
+            font-weight: 700;
+            margin-right: 12px;
+
+            @include for-tablet-up {
+                display: none;
+            }
+            @include for-desktop-up {
+                display: inline;
+            }
+        }
+    }
+
+    &:hover {
+        border-bottom-color: rgba($light-color, 0.5);
+    }
+
+    &.active {
+        border-bottom-color: $light-color;
+    }
+}
+
+.navbar__btn {
+    margin: 16px;
+    padding: 8px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include for-tablet-up {
+        display: none;
+    }
+
+    img {
+        width: 24px;
+    }
+}
