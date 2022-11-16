@@ -11,6 +11,7 @@
     color: $soft-light-color;
 
     @include for-desktop-up {
+        justify-content: start;
         gap: 24px;
     }
 }

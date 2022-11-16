@@ -246,6 +246,10 @@ p {
   background-color: #383B4B;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 .tabs {
   display: flex;
   justify-content: center;

@@ -45,3 +45,7 @@ p {
     border: none;
     background-color: #383B4B;
 }
+
+::-webkit-scrollbar {
+    display: none;
+}
