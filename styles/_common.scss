@@ -1,0 +1,13 @@
+@import "./variables";
+@import "./reset";
+@import "./typography";
+
+body {
+    background-color: $dark-color;
+    color: $light-color;
+}
+
+p {
+    word-wrap: break-word;
+}
+
