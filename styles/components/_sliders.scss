@@ -1,0 +1,93 @@
+/** Slider 1 **/
+
+.slider--1__items {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: $soft-light-color;
+
+    @include for-desktop-up {
+        justify-content: start;
+        gap: 24px;
+    }
+}
+
+.slider--1__items .item {
+    display: flex;
+    cursor: pointer;
+
+    & a {
+        text-decoration: none;
+        width: 10px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: rgba($light-color, 0.175);
+
+        @include for-desktop-up {
+            width: 16px;
+        }
+        
+        &:hover {
+            background-color: rgba($light-color, 0.5);
+        }
+    }
+    &.active a {
+        background-color: $light-color;
+    }
+}
+
+
+/** Slider 2 **/
+
+.slider--2__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    color: $soft-light-color;
+
+    @include for-desktop-up {
+        flex-direction: column;
+        gap: 32px;
+    }
+}
+
+.slider--2__items .item {
+    display: flex;
+    cursor: pointer;
+
+    & a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $light-color;
+        width: 40px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        border: 1px solid rgba($light-color, 0.25);
+        background-color: transparent;
+
+        @include for-tablet-up {
+            width: 56px;
+        }
+        @include for-desktop-up {
+            width: 80px;
+        }
+        
+        &:hover {
+            border-color: $light-color;
+        }
+    }
+    &.active a {
+        color: $dark-color;
+        background-color: $light-color;
+    }
+}

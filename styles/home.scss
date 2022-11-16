@@ -1,1 +1,80 @@
-@import "./common.scss";
+@import "./common";
+@import "./components/navbar";
+@import "./components/action-btn";
+
+body {
+    background-image: url("../assets/home/background-home-mobile.jpg");
+
+    @include for-tablet-up {
+        background-image: url("../assets/home/background-home-tablet.jpg");
+    }
+
+    @include for-desktop-up {
+        background-image: url("../assets/home/background-home-desktop.jpg");
+    }
+}
+
+.main-content {
+    grid-template-columns: 1fr;
+
+    @include for-desktop-up {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 24px;
+
+    @include for-tablet-up {
+        padding: 48px;
+    }
+    @include for-desktop-up {
+        align-items: flex-start;
+    }
+
+    h5 {
+        color: $soft-light-color;
+        padding-block: 2rem;
+    }
+
+    p {
+        margin-top: 24px;
+
+        @include for-tablet-up {
+            max-width: 444px;
+        }
+
+        @include for-desktop-up {
+            max-width: 450px;
+        }
+    }
+}
+
+.action-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+
+    @include for-tablet-up {
+        padding: 48px;
+    }
+
+    @include for-desktop-up {
+        padding: 48px;
+        justify-content: end;
+        align-items: flex-end;
+
+        .action-btn {
+            margin-right: 0;
+            margin-bottom: 0;
+        }
+    }
+}

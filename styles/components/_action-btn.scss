@@ -1,8 +1,12 @@
 .action-btn {
     position: relative;
+    display: flex;
+    align-items: center;
+    width: fit-content;
     margin: 2.75rem;
     padding-inline: 32px;
     background-color: $light-color;
+    text-decoration: none;
     color: $dark-color;
     aspect-ratio: 1;
     border-radius: 50%;
@@ -13,7 +17,7 @@
         padding-inline: 48px;
     }
     
-    @include for-tablet-up {
+    @include for-desktop-up {
         margin: 4.75rem;
         padding-inline: 64px;
     }

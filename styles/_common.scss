@@ -5,10 +5,57 @@
 
 body {
     background-color: $dark-color;
+    background-position: top center;
+    background-size: cover;
     color: $light-color;
     overflow-x: hidden;
 }
 
 p {
     word-wrap: break-word;
+    color: $soft-light-color;
+}
+
+.main-content {
+    display: grid;
+    text-align: center;
+
+    @include for-desktop-up {
+        text-align: start;
+    }
+}
+
+.title {
+    color: $light-color;
+    margin-bottom: 32px;
+
+    @include for-tablet-up {
+        justify-self: self-start;
+        margin-block: 40px 60px;
+    }
+
+    @include for-desktop-up {
+        margin-block: 20px 80px;
+    }
+
+    & .number {
+        font-weight: 700;
+        margin-right: 16px;
+        opacity: 0.25;
+
+        @include for-desktop-up {
+            margin-right: 24px;
+        }
+    }
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    border: none;
+    background-color: #383B4B;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
