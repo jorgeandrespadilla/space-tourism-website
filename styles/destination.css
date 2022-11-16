@@ -227,6 +227,18 @@ p {
 
 .title {
   color: #FFFFFF;
+  margin-bottom: 32px;
+}
+@media (min-width: 650px) {
+  .title {
+    justify-self: self-start;
+    margin-block: 40px 60px;
+  }
+}
+@media (min-width: 1200px) {
+  .title {
+    margin-block: 20px 80px;
+  }
 }
 .title .number {
   font-weight: 700;
@@ -438,18 +450,8 @@ body {
   }
 }
 
-.title {
-  margin-bottom: 32px;
-}
-@media (min-width: 650px) {
-  .title {
-    justify-self: self-start;
-    margin-block: 40px 60px;
-  }
-}
 @media (min-width: 1200px) {
   .title {
-    margin-block: 20px 80px;
     grid-area: title;
   }
 }

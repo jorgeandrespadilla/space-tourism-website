@@ -37,15 +37,7 @@ body {
 }
 
 .title {
-    margin-bottom: 32px;
-
-    @include for-tablet-up {
-        justify-self: self-start;
-        margin-block: 40px 60px;
-    }
-
     @include for-desktop-up {
-        margin-block: 20px 80px;
         grid-area: title;
     }
 }
