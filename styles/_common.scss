@@ -16,6 +16,15 @@ p {
     color: $soft-light-color;
 }
 
+.main-content {
+    display: grid;
+    text-align: center;
+
+    @include for-desktop-up {
+        text-align: start;
+    }
+}
+
 .title {
     color: $light-color;
 
@@ -27,14 +36,5 @@ p {
         @include for-desktop-up {
             margin-right: 24px;
         }
-    }
-}
-
-.main-content {
-    display: grid;
-    text-align: center;
-
-    @include for-desktop-up {
-        text-align: start;
     }
 }

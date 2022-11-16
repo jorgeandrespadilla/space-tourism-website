@@ -215,6 +215,16 @@ p {
   color: #D0D6F9;
 }
 
+.main-content {
+  display: grid;
+  text-align: center;
+}
+@media (min-width: 1200px) {
+  .main-content {
+    text-align: start;
+  }
+}
+
 .title {
   color: #FFFFFF;
 }
@@ -226,16 +236,6 @@ p {
 @media (min-width: 1200px) {
   .title .number {
     margin-right: 24px;
-  }
-}
-
-.main-content {
-  display: grid;
-  text-align: center;
-}
-@media (min-width: 1200px) {
-  .main-content {
-    text-align: start;
   }
 }
 
@@ -359,13 +359,16 @@ p {
 }
 
 .action-btn {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  position: relative;
   margin: 2.75rem;
   padding-inline: 32px;
   background-color: #FFFFFF;
+  text-decoration: none;
   color: #0B0D17;
   aspect-ratio: 1;
   border-radius: 50%;
