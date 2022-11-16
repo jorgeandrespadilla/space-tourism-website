@@ -1,0 +1,135 @@
+@import "./common";
+@import "./components/tabs";
+@import "./components/navbar";
+
+body {
+    background-image: url("../assets/destination/background-destination-mobile.jpg");
+
+    @include for-tablet-up {
+        background-image: url("../assets/destination/background-destination-tablet.jpg");
+    }
+
+    @include for-desktop-up {
+        background-image: url("../assets/destination/background-destination-desktop.jpg");
+    }
+}
+
+.main-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding-inline: 24px;
+
+    @include for-tablet-up {
+        padding-inline: 100px;
+    }
+
+    @include for-desktop-up {
+        grid-template-areas:
+            'title title'
+            'img nav'
+            'img content';
+        grid-template-columns: 1fr 445px;
+        grid-column-gap: 160px;
+        justify-items: start;
+        margin: auto;
+        max-width: 1320px;
+    }
+}
+
+.title {
+    margin-bottom: 32px;
+
+    @include for-tablet-up {
+        justify-self: self-start;
+        margin-block: 40px 60px;
+    }
+
+    @include for-desktop-up {
+        margin-block: 20px 80px;
+        grid-area: title;
+    }
+}
+
+.destination-image {
+    width: 170px;
+
+    @include for-tablet-up {
+        width: 300px;
+    }
+
+    @include for-desktop-up {
+        margin-top: 32px;
+        width: 445px;
+        justify-self: end;
+        grid-area: img;
+    }
+}
+
+.tab-navigation {
+    margin-block: 24px 20px;
+
+    @include for-tablet-up {
+        margin-block: 52px 32px;
+    }
+
+    @include for-desktop-up {
+        width: 400px;
+        margin-block-start: 0;
+        grid-area: nav;
+    }
+}
+
+.destination-info {
+    h2 {
+        @include for-tablet-up {
+            margin-bottom: 8px;
+        }
+    }
+
+    p {
+        margin-bottom: 32px;
+
+        @include for-tablet-up {
+            margin-bottom: 48px;
+        }
+    }
+
+    @include for-desktop-up {
+        grid-area: content;
+    }
+}
+
+.divider {
+    margin-bottom: 32px;
+
+    @include for-tablet-up {
+        margin-bottom: 28px;
+    }
+}
+
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+    justify-content: center;
+    padding: 0 24px;
+    margin-bottom: 60px;
+
+    @include for-tablet-up {
+        padding: 0 64px;
+        flex-direction: row;
+        gap: 80px;
+    }
+
+    @include for-desktop-up {
+        padding: 0;
+    }
+
+    .stats-item {
+        h2 {
+            color: $soft-light-color;
+            margin-bottom: 12px;
+        }
+    }
+}

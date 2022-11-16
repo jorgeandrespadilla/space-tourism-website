@@ -7,6 +7,10 @@
     margin: 0;
     list-style: none;
     color: $soft-light-color;
+
+    @include for-desktop-up {
+        justify-content: flex-start;
+    }
 }
 
 .tab {
