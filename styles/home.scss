@@ -15,11 +15,12 @@ body {
 }
 
 .main-content {
-    grid-template-areas: 1fr;
+    grid-template-columns: 1fr;
 
     @include for-desktop-up {
         grid-template-columns: 1fr 1fr;
-        max-width: 1440px;
+        grid-template-rows: 1fr;
+        max-width: 1320px;
         margin: auto;
     }
 }
@@ -72,7 +73,8 @@ body {
         align-items: flex-end;
 
         .action-btn {
-            margin-bottom: 0px;
+            margin-right: 0;
+            margin-bottom: 0;
         }
     }
 }
